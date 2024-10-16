@@ -45,6 +45,6 @@ class ImageTableViewCell: UITableViewCell {
     
     func bind(imageModel: ImageModel) {
         customImageView.image = imageModel.image
-        titleLabel.text = imageModel.fileName
+        titleLabel.text = imageModel.fileName.split(separator: ".").dropLast().joined(separator: ".")
     }
 }
